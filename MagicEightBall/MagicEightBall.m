@@ -23,7 +23,5 @@
     if (x==3) {
         return @"too young for this question";
     }
-    
-    
 }
 @end
