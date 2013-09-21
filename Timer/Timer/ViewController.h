@@ -15,7 +15,17 @@ NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UIButton *stopButton;
 @property (weak, nonatomic) IBOutlet UIButton *pauseButton;
 @property (weak, nonatomic) IBOutlet UIButton *stopWatch;
+@property (weak, nonatomic) IBOutlet UITextField *modeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *timeModeButton;
 @property (weak, nonatomic) IBOutlet UIDatePicker *pickATime;
+@property (weak, nonatomic) IBOutlet UILabel *countdown;
+@property (weak, nonatomic) IBOutlet UILabel *counter;
+
+
+- (IBAction)startAction:(id)sender;
+- (IBAction)cancelAction:(id)sender;
+- (IBAction)restartAction:(id)sender;
+- (IBAction)timeMode:(id)sender;
+- (IBAction)stopWatch:(id)sender;
 
 @end
