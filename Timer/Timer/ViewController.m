@@ -9,9 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *changingTime;
 @property (weak, nonatomic) IBOutlet UILabel *countdown;
 @property (weak, nonatomic) IBOutlet UILabel *counter;
-@property (weak, nonatomic) IBOutlet UILabel *timeDown;
 - (IBAction)startAction:(id)sender;
 - (IBAction)cancelAction:(id)sender;
 - (IBAction)restartAction:(id)sender;
@@ -25,9 +25,13 @@ int Den;
 {
     [self updateTime];
     [self timerRun];
+    [self countTimeDown];
     [super viewDidLoad];
     _stopWatch.hidden=NO;
     _timeModeButton.hidden=NO;
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,11 +61,18 @@ int Den;
 //Start
 - (IBAction)startAction:(id)sender {
     secondsCount=0;
-    timer=[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerRun) userInfo:nil repeats:YES];
+    
     _startButton.hidden=YES;
     _stopButton.hidden=NO;
     _pauseButton.hidden=NO;
+    _pickATime.hidden=YES;
     
+    
+    if ([_changingTime.text isEqualToString:@"Stop watch"]) {
+        timer=[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerRun) userInfo:nil repeats:YES];
+    }else{
+     timer=[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(countTimeDown) userInfo:nil repeats:YES];
+    }
    
 }
 //Stop
@@ -77,7 +88,7 @@ int Den;
 }
 //Pause
 - (IBAction)restartAction:(id)sender {
-    [timer invalidate];
+    [timer invalidate];//that will stop clock counter
     _startButton.hidden=NO;
     _stopButton.hidden=NO;
     _pauseButton.hidden=NO;
@@ -85,14 +96,25 @@ int Den;
 }
 
 - (IBAction)timeMode:(id)sender {
-    timer=[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(countTimeDown) userInfo:nil repeats:YES];
+    if ([_changingTime.text isEqualToString:@"Time mode"]) {
+        timer=[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(countTimeDown) userInfo:nil repeats:YES];
+    }else{
+    timer=[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerRun) userInfo:nil repeats:YES];
+    }
     
-    _stopWatch.hidden=YES;
+    _changingTime.text=@"Time Mode";
+    _stopWatch.hidden=NO;
     _timeModeButton.hidden=NO;
+    _pickATime.hidden=NO;
     
 }
 -(void) countTimeDown{
-    Den=Den-1;
-    _timeDown.text=[NSString stringWithFormat:@"%i",Den];
+    Den=180;
+    Den-=1;
+    int minutes= Den/60;
+    int seconds= Den-(minutes*60);
+    //int fraction=Den%10;
+    NSString *timeOutput = [NSString stringWithFormat:@"%02d:%02d",minutes,seconds];
+    _countdown.text=timeOutput;
 }
 @end
