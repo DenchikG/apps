@@ -13,7 +13,6 @@
 
 @end
 int secondsCount;
-int Den;
 @implementation ViewController
 
 - (void)viewDidLoad
@@ -24,6 +23,7 @@ int Den;
     [super viewDidLoad];
     _stopWatch.hidden=NO;
     _timeModeButton.hidden=NO;
+    self.modeLabel.font=[UIFont fontWithName:@"new font" size:17];
 
     
     
@@ -54,10 +54,16 @@ int Den;
 }
 -(void) countTimeDown{
     secondsCount=secondsCount-1;
-    int minutes= secondsCount/600;
+    /*int hours=secondsCount/3600;
+    int minutes= secondsCount/60;
     int seconds= (secondsCount/10)%60;
-    //int fraction=Den%10;
-    _countdown.text=[NSString stringWithFormat:@"%02d:%02d",minutes,seconds];
+    //int fraction=%10;
+    _countdown.text=[NSString stringWithFormat:@"%02d:%02d:%02d",hours,minutes,seconds];*/
+   int hours = secondsCount / 3600;
+   int minutes = (secondsCount % 3600) / 60;
+   int seconds = (secondsCount % 3600) % 60;
+        _countdown.text=[NSString stringWithFormat:@"%02d:%02d:%02d",hours,minutes,seconds];
+    
     if (secondsCount<=0) {
         [timer invalidate];
     }
@@ -68,16 +74,21 @@ int Den;
     
     //_modeLabel.text=@"Stop watch";
     
+    
     if ([_modeLabel.text isEqualToString:@"Stop watch"]) {
-        timer=[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerRun) userInfo:nil repeats:YES];
+        timer=[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timerRun) userInfo:nil repeats:YES];
     }else{
-     timer=[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(countTimeDown) userInfo:nil repeats:YES];
+     timer=[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(countTimeDown) userInfo:nil repeats:YES];
+        secondsCount=@(_pickATime.countDownDuration).intValue;
+        
+       
     }
    
 }
 
 - (IBAction)stopWatch:(id)sender {
     _modeLabel.text=@"Stop watch";
+    _pickATime.hidden=YES;
 }
 
 
@@ -98,10 +109,11 @@ int Den;
 }
 
 - (IBAction)timeMode:(id)sender {
-    secondsCount=1800;
+    //secondsCount=1800;
     
     
     _modeLabel.text=@"Timer Mode";
+    _pickATime.hidden=NO;
     
 }
 

@@ -18,6 +18,9 @@
 		BB79A88017EBB09800985AEA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB79A87F17EBB09800985AEA /* Default-568h@2x.png */; };
 		BB79A88317EBB09800985AEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB79A88217EBB09800985AEA /* ViewController.m */; };
 		BB79A88617EBB09800985AEA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB79A88417EBB09800985AEA /* ViewController.xib */; };
+		BBAE8CE117EFAF8C007F106B /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BBAE8CE017EFAF8C007F106B /* images.jpg */; };
+		BBAE8CE317EFAFA5007F106B /* horrendo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBAE8CE217EFAFA5007F106B /* horrendo.ttf */; };
+		BBAE8CE517EFB29C007F106B /* images-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BBAE8CE417EFB29C007F106B /* images-1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		BB79A88117EBB09800985AEA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BB79A88217EBB09800985AEA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BB79A88517EBB09800985AEA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		BBAE8CE017EFAF8C007F106B /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
+		BBAE8CE217EFAFA5007F106B /* horrendo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = horrendo.ttf; sourceTree = "<group>"; };
+		BBAE8CE417EFB29C007F106B /* images-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-1.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				BB79A87117EBB09800985AEA /* Timer-Info.plist */,
+				BBAE8CE417EFB29C007F106B /* images-1.jpg */,
+				BBAE8CE217EFAFA5007F106B /* horrendo.ttf */,
+				BBAE8CE017EFAF8C007F106B /* images.jpg */,
 				BB79A87217EBB09800985AEA /* InfoPlist.strings */,
 				BB79A87517EBB09800985AEA /* main.m */,
 				BB79A87717EBB09800985AEA /* Timer-Prefix.pch */,
@@ -163,6 +172,9 @@
 				BB79A87E17EBB09800985AEA /* Default@2x.png in Resources */,
 				BB79A88017EBB09800985AEA /* Default-568h@2x.png in Resources */,
 				BB79A88617EBB09800985AEA /* ViewController.xib in Resources */,
+				BBAE8CE117EFAF8C007F106B /* images.jpg in Resources */,
+				BBAE8CE317EFAFA5007F106B /* horrendo.ttf in Resources */,
+				BBAE8CE517EFB29C007F106B /* images-1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +310,7 @@
 				BB79A88B17EBB09800985AEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

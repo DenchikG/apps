@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D112B90E-8D97-4538-B825-10F55E5D913B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ViewsAndTouches</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F32D0824-37FF-421C-8B78-EB7A007C8040</key>
+		<string>https://github.com/DenchikG/apps.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ViewsAndTouches/ViewsAndTouches.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F32D0824-37FF-421C-8B78-EB7A007C8040</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/DenchikG/apps.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F32D0824-37FF-421C-8B78-EB7A007C8040</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F32D0824-37FF-421C-8B78-EB7A007C8040</string>
+			<key>IDESourceControlWCCName</key>
+			<string>schoolChallenges</string>
+		</dict>
+	</array>
+</dict>
+</plist>
